@@ -1,4 +1,4 @@
-
+import 'package:app_template/src/logger/provider_logger.dart';
 import 'package:app_template/src/settings/settings_controller.dart';
 import 'package:app_template/src/settings/settings_service.dart';
 import 'package:flutter/material.dart';
@@ -16,9 +16,12 @@ void main() async {
   final SettingsController settingsController =
       SettingsController(SettingsService());
   await settingsController.loadSettings();
-  
+
   runApp(
     ProviderScope(
+      observers: [
+        ProviderLogger(),
+      ],
       child: App(settingsController: settingsController),
     ),
   );
