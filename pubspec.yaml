@@ -21,6 +21,7 @@ dependencies:
   styled_text: ^4.0.0+1 # for displaying text , beaware in application we dont use default text widget instead we are using custom textwidget
   flutter_styled_toast: ^2.0.0 # for displaying toast messages
   freezed_annotation: ^1.1.0 # for generating boiler plate data properties , beaware all models are generated with freezed
+  logger: ^1.1.0 # optinal custom logger
   
 
 dev_dependencies:
